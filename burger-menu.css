@@ -1,0 +1,187 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      background-color: #bcd;
+}
+.header {
+      background-color: #fff;
+      z-index: 6;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: rgb(27, 96, 187);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 2rem;
+      flex-wrap: wrap;
+      box-shadow: 2px 2px rgba(138, 146, 168, 0.8);
+
+      height: 8rem;
+      position: relative;
+}
+.logo {
+      display: flex;
+      margin: 3rem auto auto 2rem;
+      width: 20%;
+}
+
+@media screen and (min-width: 950px) {
+      .lbl {
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            padding-right: 2rem;
+      }
+
+      .menu {
+            display: flex;
+            background-color: #fff;
+            font-size: 1.5rem;
+            list-style: none;
+            -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      }
+      li a {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            padding: 2rem 2rem;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+      }
+      li {
+            z-index: 2;
+            box-sizing: border-box;
+            border-left: #bcd 1px solid;
+      }
+      li:first-child {
+            border-left: none;
+      }
+      li:hover {
+            background-color: rgb(132, 185, 235);
+      }
+
+      .cb_label {
+            display: flex;
+            background-color: rgb(123, 146, 197);
+            width: 3rem;
+            height: 3rem;
+            margin: 3rem 3rem 2rem auto;
+            justify-content: space-around;
+            align-items: center;
+            cursor: pointer;
+      }
+      .cb_cb {
+            display: none;
+      }
+}
+
+@media screen and (max-width: 950px) {
+      .cb_cb {
+            display: none;
+      }
+      .menu {
+            position: absolute;
+            top: 100%;
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-bottom: none;
+            list-style: none;
+            transition: 0.3s ease-out;
+      }
+      .icon-bgr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(27, 96, 187);
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+            border-radius: 2px;
+            position: relative;
+            width: 2rem;
+            height: 3px;
+            z-index: 3;
+            cursor: pointer;
+            margin-right: 3rem;
+      }
+      .icon-bgr::after {
+            display: block;
+            background-color: rgb(27, 96, 187);
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+            border-radius: 2px;
+            position: absolute;
+            width: 2rem;
+            height: 3px;
+            content: "";
+            transition: 0.2s;
+            top: -10px;
+      }
+      .icon-bgr::before {
+            display: block;
+            background-color: rgb(27, 96, 187);
+            box-shadow: 1px 1px rgba(0, 0, 0, 0.35);
+            border-radius: 2px;
+            position: absolute;
+            width: 2rem;
+            height: 3px;
+            content: "";
+            transition: 0.2s;
+            bottom: -10px;
+      }
+      .cb_cb:checked ~ .menu {
+            display: block;
+      }
+
+      .cb_cb:checked ~ .icon-bgr {
+            background-color: transparent;
+            box-shadow: none;
+      }
+      .cb_cb:checked ~ .icon-bgr::after {
+            transform: rotate(45deg);
+            top: 0;
+      }
+      .cb_cb:checked ~ .icon-bgr::before {
+            transform: rotate(-45deg);
+            top: 0;
+      }
+      li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: inherit;
+            background-color: #fff;
+            cursor: pointer;
+            border: 1px solid rgb(120, 173, 226);
+      }
+      li a {
+            color: rgb(27, 96, 187);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+            text-decoration: none;
+      }
+      li:last-child {
+            border-bottom: none;
+            border-right: none;
+            box-shadow: none;
+      }
+      li:hover {
+            background-color: rgb(132, 185, 235);
+      }
+      .lbl {
+            display: flex;
+            height: 3rem;
+            width: 3rem;
+      }
+}
