@@ -47,7 +47,7 @@ a{
 	border: 2px solid;
 }
 .des-dev{
-	background: url(../img/[Originals]/laponchair.jpg) 0 50% no-repeat;
+	background: url(../img/laponchair.jpg) 0 50% no-repeat;
 	background-size:cover;
 	display:flex;
 	flex-direction:column;
